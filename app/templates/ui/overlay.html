@@ -1,0 +1,11 @@
+<% if (m.visible) { %>
+  <div class="topcoat-overlay-bg"></div>
+  <aside class="topcoat-overlay">
+      <p <% if (m.error) { %>class="topcoat-notification"<% } %>>
+        <%- m.message %>
+      </p>
+      <% if (m.spinner) { %>
+        <div class="topcoat-spinner"></div>
+      <% } %>
+  </aside>
+<% } %>

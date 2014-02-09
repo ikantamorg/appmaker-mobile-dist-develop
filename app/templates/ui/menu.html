@@ -1,0 +1,9 @@
+<ul class="menu-items">
+  <% _.each(m.items, function(title, alias) { %>
+      <li class="menu-items-item">
+        <a href="<%- alias %>" data-menu-item="<%- alias %>">
+          <%- title %>
+        </a>
+      </li>
+  <% }); %>
+</ul>

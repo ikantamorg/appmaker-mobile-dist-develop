@@ -1,0 +1,26 @@
+<% if (m.visible) { %>
+  <div class="topcoat-navigation-bar">
+    <% if (m.home) { %>
+      <div class="topcoat-navigation-bar__item center full">
+          <h1 class="topcoat-navigation-bar__title">
+            <%- m.title %>
+          </h1>
+      </div>
+    <% } else { %>
+      <div class="topcoat-navigation-bar__item left quarter">
+        <a href="<%= m.back %>" class="topcoat-icon-button">
+          <% if (m.back === "home") { %>
+            <span class="topcoat-icon icomatic">home</span>
+          <% } else { %>
+            <span class="topcoat-icon icomatic">backlight</span>
+          <% } %>
+        </a>
+      </div>
+      <div class="topcoat-navigation-bar__item center half">
+          <h1 class="topcoat-navigation-bar__title">
+            <%- m.title %>
+          </h1>
+      </div>
+    <% } %>
+  </div>
+<% } %>
