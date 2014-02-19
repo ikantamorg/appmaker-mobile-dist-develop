@@ -1,11 +1,24 @@
 <% if (m.visible) { %>
   <div class="topcoat-overlay-bg"></div>
   <aside class="topcoat-overlay">
-      <p <% if (m.error) { %>class="topcoat-notification"<% } %>>
+      <% if (m.error) { %>
+        <span class="topcoat-notification">
+          <%- m.title %>
+        </span>
+      <% } %>
+      <p>
         <%- m.message %>
       </p>
       <% if (m.spinner) { %>
         <div class="topcoat-spinner"></div>
+      <% } %>
+      <% if (m.button) { %>
+        <% if (m.button === "retry") { %>
+          <button class="topcoat-icon-button overlay-button-retry">
+            <span class="topcoat-icon icomatic">refresh</span>
+            Retry
+          </button>
+        <% } %>
       <% } %>
   </aside>
 <% } %>

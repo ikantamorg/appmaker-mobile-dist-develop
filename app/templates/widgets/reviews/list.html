@@ -1,0 +1,26 @@
+<% if (c.length) { %>
+
+  <div class="topcoat-list">
+    <ul class="topcoat-list__container">
+      <h3 class="topcoat-list__header"></h3>
+      <% _.each(c.models, function(m) { %>
+        <li class="topcoat-list__item">
+          <strong><%- m.get("title") %></strong>
+          <p>
+            <a href="<%= m.url() %>" class="inherit-styles">
+              <%- _.str.prune(m.get("content"), 100) %>
+            </a>
+          </p>
+          <i>- <%- m.get("name") %></i>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+
+<% } else { %>
+
+  <div class="lonely-content">
+    No content
+  </div>
+
+<% } %>

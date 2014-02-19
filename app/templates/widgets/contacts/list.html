@@ -1,0 +1,38 @@
+<% if (c.length) { %>
+
+  
+  <div class="topcoat-list">
+    <ul class="topcoat-list__container">
+      <h3 class="topcoat-list__header">Emails</h3>
+      <% var emails = _.where(c.models, { type: "email" }); %>
+      <% if (emails.length) { %>
+        <% _.each(emails, function(m) { %>
+          <li class="topcoat-list__item">
+            <span><%- m.get("value") %></span>
+          </li>
+        <% }); %>
+      <% } else { %>
+        <li class="topcoat-list__item">-</li>
+      <% } %>
+      
+      <h3 class="topcoat-list__header">Phones</h3>
+      <% var phones = _.where(c.models, { type: "phone" }); %>
+      <% if (phones.length) { %>
+        <% _.each(phones, function(m) { %>
+          <li class="topcoat-list__item">
+            <span><%- m.get("value") %></span>
+          </li>
+        <% }); %>
+      <% } else { %>
+        <li class="topcoat-list__item">-</li>
+      <% } %>
+    </ul>
+  </div>
+
+<% } else { %>
+
+  <div class="lonely-content">
+    No content
+  </div>
+
+<% } %>
