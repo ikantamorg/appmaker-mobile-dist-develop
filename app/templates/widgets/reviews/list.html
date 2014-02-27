@@ -5,13 +5,26 @@
       <h3 class="topcoat-list__header"></h3>
       <% _.each(c.models, function(m) { %>
         <li class="topcoat-list__item">
-          <strong><%- m.get("title") %></strong>
-          <p>
-            <a href="<%= m.url() %>" class="inherit-styles">
-              <%- _.str.prune(m.get("content"), 100) %>
-            </a>
-          </p>
-          <i>- <%- m.get("name") %></i>
+          <a href="<%= m.url() %>" class="topcoat-list__item__full-link">
+            <div class="topcoat-grid">
+              <div class="topcoat-grid__row off-bot-10">
+                <div class="topcoat-grid__column--auto">
+                  <strong><%- m.get("title") %></strong>
+                </div>
+              </div>
+              <div class="topcoat-grid__row off-bot-10">
+                <div class="topcoat-grid__column--auto">
+                  <%- _.str.prune(m.get("content"), 100) %>
+                </div>
+              </div>
+              <div class="topcoat-grid__row off-bot-10">
+                <div class="topcoat-grid__column--auto">
+                  <i>- <%- m.get("name") %></i>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </a>
         </li>
       <% }); %>
     </ul>
@@ -19,8 +32,8 @@
 
 <% } else { %>
 
-  <div class="lonely-content">
-    No content
+  <div class="lonely center">
+    Здесь пока ничего нет
   </div>
 
 <% } %>

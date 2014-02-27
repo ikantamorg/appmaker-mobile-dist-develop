@@ -1,15 +1,15 @@
-<% if (m.visible) { %>
+<% if (m.get("visible")) { %>
   <div class="topcoat-navigation-bar">
-    <% if (m.home) { %>
+    <% if (m.get("home")) { %>
       <div class="topcoat-navigation-bar__item center full">
           <h1 class="topcoat-navigation-bar__title">
-            <%- m.title %>
+            <%- m.get("title") %>
           </h1>
       </div>
     <% } else { %>
       <div class="topcoat-navigation-bar__item left quarter">
-        <a href="<%= m.back %>" class="topcoat-icon-button">
-          <% if (m.back === "home") { %>
+        <a href="<%= m.get("back") %>" class="topcoat-icon-button">
+          <% if (m.get("back") === "home") { %>
             <span class="topcoat-icon icomatic">home</span>
           <% } else { %>
             <span class="topcoat-icon icomatic">backlight</span>
@@ -18,7 +18,7 @@
       </div>
       <div class="topcoat-navigation-bar__item center half">
           <h1 class="topcoat-navigation-bar__title">
-            <%- m.title %>
+            <%- m.get("title") %>
           </h1>
       </div>
     <% } %>

@@ -1,9 +1,19 @@
-<ul class="menu-items">
-  <% _.each(m.items, function(title, alias) { %>
-      <li class="menu-items-item">
-        <a href="<%- alias %>" data-menu-item="<%- alias %>">
-          <%- title %>
-        </a>
-      </li>
-  <% }); %>
-</ul>
+<div class="menu">
+  <% if (_.size(m.get("items"))) { %>
+    <ul class="menu__list">
+      <% _.each(m.get("items"), function(title, alias) { %>
+          <li class="menu__list__item">
+            <a href="<%- alias %>" data-menu-item="<%- alias %>" class="menu__list__item__link topcoat-button">
+              <%- title %>
+            </a>
+          </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <div class="lonely center">
+      <span class="topcoat-notification">
+        Ни один виджет не установлен
+      </span>
+    </div>
+  <% } %>
+</div>

@@ -1,7 +1,13 @@
-<div class="lonely-content">
-  <% if (m.get("content")) { %>
-    <%- m.get("content") %>
-  <% } else { %>
-    No content
-  <% } %>
+<div class="lonely">
+    <div class="topcoat-grid__row">
+        <div class="topcoat-grid__column--auto">
+            <% if (m.get("content")) { %>
+                <%- m.get("content") %>
+            <% } else { %>
+                <div class="center">
+                    Здесь пока ничего нет
+                </div>
+            <% } %>    
+        </div>
+    </div>
 </div>
