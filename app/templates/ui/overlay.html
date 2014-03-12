@@ -7,7 +7,7 @@
           </span>
         <% } %>
         <p>
-          <%- m.get("message") %>
+          <%= m.get("message") %>
         </p>
         <% if (m.get("spinner")) { %>
           <div class="topcoat-spinner"></div>
@@ -16,12 +16,12 @@
           <% if (m.get("button") === "retry") { %>
             <button class="topcoat-icon-button overlay-button-retry">
               <span class="topcoat-icon icomatic">refresh</span>
-              Повторить
+              <%_ Retry %>
             </button>
           <% } else if(m.get("button") === "ok") { %>
             <button class="topcoat-icon-button overlay-button-ok">
               <span class="topcoat-icon icomatic">checkmark</span>
-              Ок
+              <%_ Ok %>
             </button>
           <% } %>
         <% } %>

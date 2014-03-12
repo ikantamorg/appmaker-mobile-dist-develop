@@ -1,55 +1,23 @@
 <div class="topcoat-grid lonely">
-  <% if (m.get("schedules").length && m.get("services").length && m.get("sessions").length) { %>
+<% if (m.isBookingAvailable()) { %>
 
-    <div class="clear">
-      Выберите сервис:
+  <div class="form"></div>
+  
+  <hr>
+
+  <div class="topcoat-grid__row off-bot-10">
+    <div class="topcoat-grid__column--auto">
+      <button class="topcoat-button--cta book"><%_ Book now %></button>    
+      <div class="topcoat-spinner booking-spinner" style="display: none;"></div>
     </div>
+  </div>
 
-    <select class="booking-service">
-      <option value=""></option>
-      <% _.each(m.get("services"), function(s) { %>
-      <option value="<%= s.id %>"><%- s.name %> (<%= s.price %>)</option>
-      <% }); %>
-    </select>
+<% } else { %>
 
-    <div class="clear">
-      Выберите день приема:
-    </div>
+  <div class="center">
+    <%_ No content %>
+  </div>
 
-    <input class="booking-day" />
+<% } %>
 
-    <div class="clear">
-      Выберите время сеанса:
-    </div>
-
-    <select class="booking-time">
-      <option value=""></option>
-      <% _.each(m.get("sessions"), function(s) { %>
-      <option value="<%= s.id %>"><%- s.starts_at %> - <%- s.ends_at %></option>
-      <% }); %>
-    </select>
-
-    <div class="clear">
-      Выберите кол-во человек:
-    </div>
-
-    <select class="booking-persons">
-      <option value=""></option>
-      <% _.each(_.range(1,11), function(s) { %>
-      <option value="<%= s %>"><%= s %></option>
-      <% }); %>
-    </select>
-
-    <div class="clear off-bot-10"></div>
-
-    <button class="topcoat-button--cta booking-book">Сделать заказ</button>
-    <div class="topcoat-spinner booking-spinner" style="display: none;"></div>
-
-  <% } else { %>
-
-    <div class="center">
-        Здесь пока ничего нет
-    </div>
-
-  <% } %>
 </div>

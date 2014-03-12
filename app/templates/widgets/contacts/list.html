@@ -1,34 +1,20 @@
 <% if (c.length) { %>
 
   
-  <div class="topcoat-list">
-    <ul class="topcoat-list__container">
-      <h3 class="topcoat-list__header">Электронная почта</h3>
-      <% var emails = _.filter(c.models, function(m) { return m.get("type") === "email" }); %>
-      <% if (emails.length) { %>
-        <% _.each(emails, function(m) { %>
-          <li class="topcoat-list__item">
-            <span><%- m.get("value") %></span>
-          </li>
-        <% }); %>
-      <% } %>
-      
-      <h3 class="topcoat-list__header">Контакные телефоны</h3>
-      <% var phones = _.filter(c.models, function(m) { return m.get("type") === "phone" }); %>
-      <% if (phones.length) { %>
-        <% _.each(phones, function(m) { %>
-          <li class="topcoat-list__item">
-            <span><%- m.get("value") %></span>
-          </li>
-        <% }); %>    
-      <% } %>
-    </ul>
+  <div class="topcoat-grid">
+    <div class="topcoat-grid__row">
+      <div class="topcoat-grid__row__column--auto">
+
+        <div class="contact-map"></div>
+
+      </div>
+    </div>
   </div>
 
 <% } else { %>
 
   <div class="lonely center">
-    Здесб пока ничего нет
+    <%_ No content %>
   </div>
 
 <% } %>

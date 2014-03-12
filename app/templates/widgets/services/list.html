@@ -9,7 +9,7 @@
             <div class="topcoat-grid">
               <div class="topcoat-grid__row">
                 <div class="topcoat-grid__column--3">
-                  <img class="strict-image-100-100" src="<%= m.get("image") %>" alt="<%- m.get("name") %>">
+                  <img class="strict-image-100-100" src="<%= m.image() %>" alt="<%- m.get("name") %>">
                 </div>
                 <div class="topcoat-grid__column--9">
                   <strong><%- m.get("name") %></strong>
@@ -30,7 +30,7 @@
 <% } else { %>
 
   <div class="lonely center">
-    Здесь пока ничего нет
+    <%_ No content %>
   </div>
 
 <% } %>
