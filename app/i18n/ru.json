@@ -4,6 +4,7 @@
     "Loading...": "Загрузка...",
     "Notification": "Уведомление",
     "Retry": "Повторить",
+    "Sync": "Синхронизировать",
     "No widgets installed": "Ни один виджет не установлен",
     "Book now": "Сделать заказ",
     "Ok": "Ок",
@@ -18,6 +19,8 @@
     "Error getting configuration file": "Невозможно открыть конфигурационный файл",
     "Error parsing configuration file": "Невозможно обработать конфигурационный файл",
     "Error loading configuration file": "Невозможно загрузить конфигурационный файл",
+    "Error": "Ошибка",
+    "Synchronized": "Синхронизировано",
 
     "Required": "Обязательно",
     "Invalid": "Неверно",

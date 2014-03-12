@@ -18,6 +18,11 @@
               <span class="topcoat-icon icomatic">refresh</span>
               <%_ Retry %>
             </button>
+          <% } else if(m.get("button") === "sync") { %>
+            <button class="topcoat-icon-button overlay-button-retry">
+              <span class="topcoat-icon icomatic">refresh</span>
+              <%_ Sync %>
+            </button>
           <% } else if(m.get("button") === "ok") { %>
             <button class="topcoat-icon-button overlay-button-ok">
               <span class="topcoat-icon icomatic">checkmark</span>
