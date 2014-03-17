@@ -9,17 +9,12 @@
             <div class="topcoat-grid">
               <div class="topcoat-grid__row off-bot-10">
                 <div class="topcoat-grid__column--auto">
-                  <strong><%- m.get("title") %></strong>
+                  <%- _.str.prune(m.get("content"), 200) %>
                 </div>
               </div>
               <div class="topcoat-grid__row off-bot-10">
                 <div class="topcoat-grid__column--auto">
-                  <%- _.str.prune(m.get("content"), 100) %>
-                </div>
-              </div>
-              <div class="topcoat-grid__row off-bot-10">
-                <div class="topcoat-grid__column--auto">
-                  <i>- <%- m.get("name") %></i>
+                  <em>- <%- m.get("name") %></em>
                 </div>
               </div>
             </div>

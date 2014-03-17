@@ -21,6 +21,9 @@
     "Error loading configuration file": "Невозможно загрузить конфигурационный файл",
     "Error": "Ошибка",
     "Synchronized": "Синхронизировано",
+    "We are experiencing problems on our server. Please try again later.": "У нас возникли проблемы на сервере. Пожалуйста, повторите попытку позже.",
+    "No connection": "Соединение отсутствует",
+    "Please check your internet connection and try again": "Пожалуйста, проверьте подключение к сети и повторите еще раз",
 
     "Required": "Обязательно",
     "Invalid": "Неверно",
@@ -42,7 +45,14 @@
     "Date": "Дата",
     "Starts at": "Начало",
     "Ends at": "Конец",
+    "Set": "Выбрать",
+    "Cancel": "Отмена",
+    "Clear": "Очистить",
+    "Day": "День",
+    "Month": "Месяц",
+    "Year": "Год",
 
     "Emails": "Е-мэилы",
-    "Phones": "Телефоны"
+    "Phones": "Телефоны",
+    "Loading map ...": "Загрузка карты ..."
 }
