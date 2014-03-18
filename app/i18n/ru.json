@@ -40,7 +40,7 @@
     "Number of persons *": "Количество человек *",
     "No available sessions": "Нет свободных сеансов",
     "Session reserved": "Сеанс зарезервирован",
-    "For": "На",
+    "For name": "На имя",
     "Service": "Услуга",
     "Date": "Дата",
     "Starts at": "Начало",
@@ -51,6 +51,7 @@
     "Day": "День",
     "Month": "Месяц",
     "Year": "Год",
+    "Ordered": "Заказ завершен",
 
     "Emails": "Е-мэилы",
     "Phones": "Телефоны",
