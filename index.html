@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=0">
 
   <title>ProfiApp Mobile Application</title>
 
@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+  <div class="test"></div>
 
   <!-- Application container. -->
   <main role="main" class="main"></main>
@@ -24,6 +26,10 @@
 
   <!-- Application source. -->
   <script src="source.min.js"></script>
+
+  <!-- build:remove:prod -->
+  <script src="http://debug.build.phonegap.com/target/target-script-min.js#micrddrgn"></script>
+  <!-- /build -->
 
 </body>
 </html>
