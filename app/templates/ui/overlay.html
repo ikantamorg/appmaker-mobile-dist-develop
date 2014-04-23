@@ -30,12 +30,11 @@
             </button>
           <% } %>
         <% } %>
-        <!--
-        <button class="topcoat-icon-button overlay-button-cancel">
-          <span class="topcoat-icon icomatic">cancel</span>
-          <%_ Cancel %>
-        </button>
-        -->
+        <% if (m.get("error") === true) { %>
+          <button class="topcoat-icon-button overlay-button-cancel">
+            <span class="topcoat-icon icomatic">cancel</span>
+          </button>
+        <% } %>
     </aside>
   </div>
 <% } %>
