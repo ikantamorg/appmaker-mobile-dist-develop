@@ -13,13 +13,13 @@
       </div>
     <% } else { %>
       <div class="topcoat-navigation-bar__item left quarter main__header__bar__item">
-        <a href="<%= m.get("back") %>" class="topcoat-icon-button">
+        <button data-href="<%= m.get("back") %>" class="topcoat-icon-button">
           <% if (m.get("back") === "home") { %>
             <span class="topcoat-icon icomatic">home</span>
           <% } else { %>
             <span class="topcoat-icon icomatic">backlight</span>
           <% } %>
-        </a>
+        </button>
       </div>
       <div class="topcoat-navigation-bar__item center half">
           <h1 class="topcoat-navigation-bar__title main__header__bar__item__title">

@@ -5,7 +5,7 @@
       <h3 class="topcoat-list__header"></h3>
       <% _.each(c.models, function(m) { %>
         <li class="topcoat-list__item">
-          <a href="<%= m.url() %>" class="topcoat-list__item__full-link">
+          <button data-href="<%= m.url() %>" class="topcoat-list__item__full-link">
             <div class="topcoat-grid">
               <div class="topcoat-grid__row off-bot-10">
                 <div class="topcoat-grid__column--auto">
@@ -19,7 +19,7 @@
               </div>
             </div>
             <div class="clear"></div>
-          </a>
+          </button>
         </li>
       <% }); %>
     </ul>

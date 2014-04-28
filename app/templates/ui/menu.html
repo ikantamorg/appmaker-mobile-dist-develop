@@ -3,9 +3,9 @@
     <ul class="menu__list">
       <% _.each(m.get("items"), function(title, alias) { %>
           <li class="menu__list__item">
-            <a href="<%- alias %>" data-menu-item="<%- alias %>" class="menu__list__item__link topcoat-button">
+            <button data-href="<%- alias %>" data-menu-item="<%- alias %>" class="menu__list__item__link topcoat-button">
               <%- title %>
-            </a>
+            </button>
           </li>
       <% }); %>
     </ul>
