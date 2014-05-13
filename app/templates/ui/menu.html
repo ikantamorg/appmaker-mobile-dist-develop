@@ -1,7 +1,7 @@
 <div class="menu">
-  <% if (_.size(m.get("items"))) { %>
+  <% if (_.size(m.get('items'))) { %>
     <ul class="menu__list">
-      <% _.each(m.get("items"), function(title, alias) { %>
+      <% _.each(m.get('items'), function(title, alias) { %>
           <li class="menu__list__item">
             <button data-href="<%- alias %>" data-menu-item="<%- alias %>" class="menu__list__item__link topcoat-button">
               <%- title %>

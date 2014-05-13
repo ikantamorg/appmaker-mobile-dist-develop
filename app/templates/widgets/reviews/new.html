@@ -1,5 +1,8 @@
 <div class="topcoat-grid lonely">
-<% if (settings.isBookingAvailable()) { %>
+
+  <div class="review-note">
+    <%_ * Review must pass the moderation before it will be added %>
+  </div>
 
   <div class="form"></div>
   
@@ -7,17 +10,9 @@
 
   <div class="topcoat-grid__row off-bot-10">
     <div class="topcoat-grid__column--auto">
-      <button class="topcoat-button--cta book"><%_ Book now %></button>    
+      <button class="topcoat-button--cta send"><%_ Send %></button>    
       <div class="topcoat-spinner booking-spinner" style="display: none;"></div>
     </div>
   </div>
-
-<% } else { %>
-
-  <div class="center">
-    <%_ No content %>
-  </div>
-
-<% } %>
 
 </div>

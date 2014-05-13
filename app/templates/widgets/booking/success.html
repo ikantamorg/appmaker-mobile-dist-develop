@@ -1,0 +1,16 @@
+<div class="lonely center">
+  <% if (_.size(m.attributes) > 0) { %>
+    <table class="booking-success-table">
+      <tr><th><%_ For name %></th><td><%- m.get('name') %></td></tr>
+      <tr><th><%_ Service %></th><td><%- m.get('service_name') %></td></tr>
+      <tr><th><%_ Date %></th><td><%- m.get('date') %></td></tr>
+      <tr><th><%_ Starts at %></th><td><%- m.get('session_starts_at') %></td></tr>
+      <tr><th><%_ Ends at %></th><td><%- m.get('session_ends_at') %></td></tr>
+    </table>
+  <% } else { %>
+    <div class="lonely off-bot-10">
+      <%_ Back to home %>
+    </div>
+  <% } %>
+  <button data-href="home" class="topcoat-button"><%_ Ok %></button>    
+</div>
