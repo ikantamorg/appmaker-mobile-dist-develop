@@ -1,3 +1,5 @@
 {
-  "key": "devuniqueapikey"
+  "key": "devuniqueapikey",
+  "remote": "https://appin5minutes.com/api/v1/",
+  "locale": "en"
 }

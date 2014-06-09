@@ -1,3 +1,5 @@
 {
-  "key": "develop-api-key"
+  "key": "develop-api-key",
+  "remote": "http://example.com/api/v1/",
+  "locale": "en"
 }

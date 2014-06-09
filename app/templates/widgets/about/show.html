@@ -1,8 +1,8 @@
 <div class="lonely">
   <div class="topcoat-grid__row">
     <div class="topcoat-grid__column--auto">
-      <% if (m.get("content")) { %>
-        <%- m.get("content") %>
+      <% if (data.model.get('content')) { %>
+        <%= data.model.get('content') %>
       <% } else { %>
         <div class="center">
           <%_ No content %>

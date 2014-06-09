@@ -1,20 +1,20 @@
-<% if (c.length) { %>
+<% if (data.collection.length) { %>
 
   <div class="topcoat-list">
     <ul class="topcoat-list__container">
       <h3 class="topcoat-list__header"></h3>
-      <% _.each(c.models, function(m) { %>
+      <% _.each(data.collection.models, function(model) { %>
         <li class="topcoat-list__item">
-          <button data-href="<%= m.localUrl() %>" class="topcoat-list__item__full-link">
+          <button data-href="<%= model.localUrl() %>" class="topcoat-list__item__full-link">
             <div class="topcoat-grid">
               <div class="topcoat-grid__row off-bot-10">
                 <div class="topcoat-grid__column--auto">
-                  <%- _.str.prune(m.get("content"), 200) %>
+                  <%- _.str.prune(_.str.stripTags(model.get('content')), 200) %>
                 </div>
               </div>
               <div class="topcoat-grid__row off-bot-10">
                 <div class="topcoat-grid__column--auto">
-                  <em>- <%- m.get("name") %></em>
+                  <em>- <%- model.get('name') %></em>
                 </div>
               </div>
             </div>

@@ -1,36 +1,36 @@
 <% if (m.get("visible")) { %>
   <div class="topcoat-overlay-bg">
     <aside class="topcoat-overlay">
-        <% if (m.get("error")) { %>
+        <% if (m.get('error')) { %>
           <span class="topcoat-notification">
-            <%- m.get("title") %>
+            <%- m.get('title') %>
           </span>
         <% } %>
         <p>
-          <%= m.get("message") %>
+          <%= m.get('message') %>
         </p>
-        <% if (m.get("spinner")) { %>
+        <% if (m.get('spinner')) { %>
           <div class="topcoat-spinner"></div>
         <% } %>
-        <% if (m.get("button")) { %>
-          <% if (m.get("button") === "retry") { %>
+        <% if (m.get('button')) { %>
+          <% if (m.get('button') === 'retry') { %>
             <button class="topcoat-icon-button overlay-button-retry">
               <span class="topcoat-icon icomatic">refresh</span>
               <%_ Retry %>
             </button>
-          <% } else if(m.get("button") === "sync") { %>
+          <% } else if(m.get('button') === 'sync') { %>
             <button class="topcoat-icon-button overlay-button-retry">
               <span class="topcoat-icon icomatic">refresh</span>
               <%_ Sync %>
             </button>
-          <% } else if(m.get("button") === "ok") { %>
+          <% } else if(m.get('button') === 'ok') { %>
             <button class="topcoat-icon-button overlay-button-ok">
               <span class="topcoat-icon icomatic">checkmark</span>
               <%_ Ok %>
             </button>
           <% } %>
         <% } %>
-        <% if (m.get("error") === true) { %>
+        <% if (m.get('cancel') === true) { %>
           <button class="topcoat-icon-button overlay-button-cancel">
             <span class="topcoat-icon icomatic">cancel</span>
           </button>
