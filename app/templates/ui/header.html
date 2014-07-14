@@ -1,9 +1,9 @@
-<% if (m.get('visible')) { %>
+<% if (data.model.get('visible')) { %>
   <div class="topcoat-navigation-bar main__header__bar">
-    <% if (m.get('home')) { %>
+    <% if (data.model.get('home')) { %>
       <div class="topcoat-navigation-bar__item center full">
           <h1 class="topcoat-navigation-bar__title main__header__bar__item__title">
-            <%- m.get('title') %>
+            <%- data.model.get('title') %>
             <!--
             <button class="topcoat-icon-button topcoat-navigation-bar__item__right-button sync">
               <span class="topcoat-icon icomatic">refresh</span>
@@ -13,8 +13,8 @@
       </div>
     <% } else { %>
       <div class="topcoat-navigation-bar__item left quarter main__header__bar__item">
-        <button data-href="<%= m.get('back') %>" class="topcoat-icon-button">
-          <% if (m.get('back') === 'home') { %>
+        <button data-href="<%= data.model.get('back') %>" class="topcoat-icon-button">
+          <% if (data.model.get('back') === 'home') { %>
             <span class="topcoat-icon icomatic">home</span>
           <% } else { %>
             <span class="topcoat-icon icomatic">backlight</span>
@@ -23,13 +23,13 @@
       </div>
       <div class="topcoat-navigation-bar__item center half">
           <h1 class="topcoat-navigation-bar__title main__header__bar__item__title">
-            <%- m.get('title') %>
+            <%- data.model.get('title') %>
           </h1>
       </div>
-      <% if (m.hasAction()) { %>
+      <% if (data.model.hasAction()) { %>
         <div class="topcoat-navigation-bar__item right quarter main__header__bar__item">
-          <button data-href='<%- m.get('action').link %>' class="topcoat-icon-button">
-            <span class="topcoat-icon icomatic"><%- m.get('action').icon %></span>
+          <button data-href='<%- data.model.get('action').link %>' class="topcoat-icon-button">
+            <span class="topcoat-icon icomatic"><%- data.model.get('action').icon %></span>
           </button>
         </div>
       <% } %>

@@ -1,36 +1,36 @@
-<% if (m.get("visible")) { %>
+<% if (data.model.get('visible')) { %>
   <div class="topcoat-overlay-bg">
     <aside class="topcoat-overlay">
-        <% if (m.get('error')) { %>
+        <% if (data.model.get('error')) { %>
           <span class="topcoat-notification">
-            <%- m.get('title') %>
+            <%- data.model.get('title') %>
           </span>
         <% } %>
         <p>
-          <%= m.get('message') %>
+          <%= data.model.get('message') %>
         </p>
-        <% if (m.get('spinner')) { %>
+        <% if (data.model.get('spinner')) { %>
           <div class="topcoat-spinner"></div>
         <% } %>
-        <% if (m.get('button')) { %>
-          <% if (m.get('button') === 'retry') { %>
+        <% if (data.model.get('button')) { %>
+          <% if (data.model.get('button') === 'retry') { %>
             <button class="topcoat-icon-button overlay-button-retry">
               <span class="topcoat-icon icomatic">refresh</span>
               <%_ Retry %>
             </button>
-          <% } else if(m.get('button') === 'sync') { %>
-            <button class="topcoat-icon-button overlay-button-retry">
+          <% } else if(data.model.get('button') === 'sync') { %>
+            <button class="topcoat-icon-button overlay-button-retry overlay-button-sync">
               <span class="topcoat-icon icomatic">refresh</span>
               <%_ Sync %>
             </button>
-          <% } else if(m.get('button') === 'ok') { %>
+          <% } else if(data.model.get('button') === 'ok') { %>
             <button class="topcoat-icon-button overlay-button-ok">
               <span class="topcoat-icon icomatic">checkmark</span>
               <%_ Ok %>
             </button>
           <% } %>
         <% } %>
-        <% if (m.get('cancel') === true) { %>
+        <% if (data.model.get('cancel') === true) { %>
           <button class="topcoat-icon-button overlay-button-cancel">
             <span class="topcoat-icon icomatic">cancel</span>
           </button>

@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=0">
 
-  <title>ProfiApp Mobile Application</title>
+  <title>Mobile Application</title>
 
-  <!-- Application styles. -->
+  <!-- Application styles -->
   <link rel="stylesheet" href="styles.min.css">
 </head>
 
@@ -16,19 +16,25 @@
   <!-- Application container. -->
   <main role="main" class="main"></main>
 
-  <!-- Use dummy file for cordova for dev -->
+  <!-- These "build" things will be processed with "processhtml" task when running grunt-->
+  <!-- These commented scripts are not required for development, but are required for production-->
+
+  <!-- Mobile app only, dev only: weinre debbuger -->
+  <script src="http://debug.build.phonegap.com/target/target-script-min.js#micrddrgn"></script>
+  <!--
+  <script type="text/javascript" src="http://debug.build.phonegap.com/target/target-script-min.js#micrddrgn"></script>
+  -->
+
+  <!-- Mobile app only: cordova.js will be added by phonegap build -->
   <script src="cordova.js"></script>
 
-  <!-- Plugin for push notifications -->
+  <!-- Mobile app only: Plugin for push notifications -->
   <script src="PushNotification.js"></script>
 
-  <!-- Application source. -->
-  <script src="source.min.js"></script>
+  <!-- Mobile app only: compiled templates -->
+  <script src="templates.js"></script>
 
-  <!-- build:remove:prod -->
-  <!-- Be careful when using. It may block all console logs, just comment it and retry -->
-  <script src="http://debug.build.phonegap.com/target/target-script-min.js#micrddrgn"></script>
-  <!-- /build -->
+  <script src="source.min.js"></script>
 
 </body>
 </html>
